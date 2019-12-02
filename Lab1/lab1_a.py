@@ -17,7 +17,7 @@ def union(x,y, FU):
             FU[y][1]+=1
         FU[y][0] = x
 
-def solveA(test_path):
+def solve(test_path):
     (V,L) = loadWeightedGraph(test_path)
     FU = [[i,0] for i in range(V+1)]
 
