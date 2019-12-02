@@ -3,6 +3,8 @@
 from dimacs import readSolution
 import os
 import lab2_1
+import lab2_2
+
 def test(func, test_directory ):
     
     tests = [os.fsdecode(file) for file in os.listdir(test_directory)]
@@ -31,3 +33,4 @@ def test(func, test_directory ):
     print("-" * 50)
 
 test(lab2_1.solve, 'flow')
+# test(lab2_2.solve, 'connectivity')
