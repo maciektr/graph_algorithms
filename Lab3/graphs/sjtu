@@ -1,4 +1,4 @@
-c solution = 9
+c solution = 4
 p edge 8 12
 e 1 2 2
 e 1 5 3
