@@ -39,9 +39,26 @@ bool match(int x, vvi &G, vb &visited, vi &mate){
     return false;
 }
 
+    
+void tryDummMatching(vvi &G, vi &mate){
+    for(int i = 0; i < sz(G); i++){
+        if(mate[i] == alone){
+            for(auto k : G[i]){
+                if(mate[k] == alone){
+                    mate[k] = i;
+                    mate[i] = k;
+                    break;
+                }
+            }
+        }
+    }
+}
+
 void solve(vvi &G, vi &mate){
     mate.clear();
     mate.resize(sz(G),alone);
+    
+    tryDummMatching(G,mate);
 
     bool flag=true;
     while(flag){
