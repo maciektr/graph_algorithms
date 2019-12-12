@@ -259,3 +259,4 @@ dmypy.json
 *.docx
 *.pdf
 ignore/
+Project1/.vscode/
